@@ -5,5 +5,6 @@
   <br>
  
   <form class="form-inline">
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search users" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i>
+    <input #user name = 'user' class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search users" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i>
+    <button (click)='getUser(user)'></button>
 </form>
