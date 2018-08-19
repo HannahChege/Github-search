@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../users.service';
-
-
-import { Users } from '../users';
 import { HttpClient } from '@angular/common/http';
+import { UsersService } from '../users.service';
+import { Users } from '../users';
+import { Repositories } from '../repositories'
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -11,35 +11,34 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-user: Users;
 
-constructor(private usersService:UsersService,private http:HttpClient) {
+ users;
+ repositories ;
+ user:string;
+
+
+constructor(public usersService:  UsersService) {
   this.usersService.getUsers().subscribe (userPage => {
     console.log(userPage);
-    this.username = userPage;
+    this.users= userPage;
   });
 
-  // findUser() {
-  //   this.usersService.updateProfile(this.users);
-  //   this.usersService.getUserInfo().subscribe(userPage => {
-  //     console.log(userPage);
-  //     this.users = userPage;
-  //   });
+}
+ findUser() {
+     this.usersService.updateProfile(this.user);
+     this.usersService.getUsers().subscribe(userPage => {
+     console.log(userPage);
+     this.users= userPage;
+    });
 
-   };
+     this.usersService.getUserRepos().subscribe(repositories => {
+      console.log(repositories);
+      this.repositories = repositories;
+   });
 
-  ngOnInit() {
-    interface ApiResponse{
-      login:string;
-      avatar_url:any;
-      repos_url:string;
-    }
-    this.http.get<ApiResponse>("https://api.github.com/users/hannahchege?access_token=505a5a7f88928ee9cb67c8b4405280c1b3a2fa1b").subscribe(data=>{
-      // this.users=new Users(data.User,data.Images,data.Bio)
-      this.users = new Users(data.avatar_url, data.login, data.repos_url);
-      console.log(data)
-    })
   }
+  ngOnInit() {
+}
 
 
 }

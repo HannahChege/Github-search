@@ -7,8 +7,10 @@ import { environment } from '../environments/environment'
 })
 
 export class UsersService {
+
   private userName: string;
   private apiKey: string = environment.apiKey;
+  
   constructor(public http: HttpClient) {
     console.log('service is now ready');
     this.userName = 'Hannah';
