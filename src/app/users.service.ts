@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from './environment/environments'
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +10,9 @@ export class UsersService {
 
   private userName: string;
   private apiKey: string = environment.apiKey;
-
   constructor(public http: HttpClient) {
     console.log('service is now ready');
-    this.userName = 'Hannah';
+    this.userName = 'hannahchege';
   }
   getUsers(){
     return this.http.get("https://api.github.com/users/" + this.userName + "?access_token=" + this.apiKey)
