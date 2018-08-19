@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import  {UserService}   from './user/user.service';
+import {UsersService   }   from './users.service';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

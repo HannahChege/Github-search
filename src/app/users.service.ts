@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../environments/environment'
+import { environment } from './environment/environments'
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class UsersService {
 
   private userName: string;
   private apiKey: string = environment.apiKey;
-  
+
   constructor(public http: HttpClient) {
     console.log('service is now ready');
     this.userName = 'Hannah';
