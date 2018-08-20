@@ -12,9 +12,9 @@ import { Repositories } from '../repositories'
 })
 export class UserComponent implements OnInit {
 
- users;
- repositories ;
- user:string;
+ users: any=[];
+ repositories: any =[] ;
+ username:string;
 
 
 constructor(public usersService:  UsersService) {
