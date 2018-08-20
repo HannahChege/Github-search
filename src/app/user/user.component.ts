@@ -25,15 +25,15 @@ constructor(public usersService:  UsersService) {
 
 }
  findUser() {
-     this.usersService.updateProfile(this.user);
+     this.usersService.updateProfile(this.users);
      this.usersService.getUsers().subscribe(userPage => {
      console.log(userPage);
      this.users= userPage;
     });
 
-     this.usersService.getUserRepos().subscribe(repositories => {
-      console.log(repositories);
-      this.repositories = repositories;
+     this.usersService.getUserRepos().subscribe(reposi => {
+      console.log(reposi);
+      this.repositories = reposi;
    });
 
   }
