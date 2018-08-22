@@ -1,13 +1,13 @@
 #TITLE
-Githubsearch
+GITHUB SEARCH
 
 ## DESCRIPTION
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2..This website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories.Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project was 
 
 
  ## AUTHOR
-Hannah Njeri Chege
+HANNAH NJERI CHEGE
 
 ## PREREQUISITES
 
