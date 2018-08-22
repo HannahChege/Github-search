@@ -31,7 +31,7 @@
               <span class="badge badge-success" style="margin:6px;">{{users.public_repos}} Public Repos</span>
             </h5></li>
 
-              <li appUnderline class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
+              <li  *ngIf="users.bio">{{users.bio}}</li>
               <li class="list-group-item" *ngIf="users.company"> Works at {{users.company}}</li>
               <li class="list-group-item" *ngIf="users.hireable">Available for hire</li>
               <li class="list-group-item" *ngIf="users.location">Currently lives in {{users.location}}</li>
