@@ -16,27 +16,20 @@ export class UserComponent implements OnInit {
  repositories: any =[] ;
  username:string;
 
+ findUser($name) {
+  console.log($name.target.value);
+  this.us.getUsers($name.target.value)
+ }
+ 
+constructor(public us:  UsersService) {}
 
-constructor(public usersService:  UsersService) {
-  this.usersService.getUsers().subscribe (userPage => {
-    console.log(userPage);
-    this.users= userPage;
-  });
 
-}
- findUser() {
-     this.usersService.updateProfile(this.users);
-     this.usersService.getUsers().subscribe(userPage => {
-     console.log(userPage);
-     this.users= userPage;
-    });
+  //    this.usersService.getUserRepos().subscribe(reposi => {
+  //     console.log(reposi);
+  //     this.repositories = reposi;
+  //  });
 
-     this.usersService.getUserRepos().subscribe(reposi => {
-      console.log(reposi);
-      this.repositories = reposi;
-   });
-
-  }
+  // }
   ngOnInit() {
 }
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../environment/environment';
+import { environment } from '../environments/environment';
 
 
 @Injectable({
@@ -11,23 +11,29 @@ import { environment } from '../environment/environment';
 
 export class UsersService {
 
-  private userName: string;
+  user$
+  private username: string;
   private apiKey: string = environment.apiKey;
-  constructor(public http: HttpClient) {
-    console.log('service is now ready');
-    this.userName = 'hannahchege';
-  }
-  getUsers(){
-    return this.http.get("https://api.github.com/users/" + this.userName + "?access_token=" + this.apiKey)
+
+  constructor(public http: HttpClient) {  }
+
+  getUsers(username){
+    this.http.get("https://api.github.com/users/"+username).subscribe(
+      data =>{
+        console.log(data)
+        this.user$ = data
+
+      }
+    )
     
   }
   getUserRepos() {
-    return this.http.get("https://api.github.com/users/" + this.userName + "/repos?access_token=" + this.apiKey)
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos?" +"?access_token=" + this.apiKey)
   
   // constructor() { }
 }
 
-updateProfile(userName: string) {
-  this.userName = userName;
+updateProfile(username: string) {
+  this.username = username;
 }
 }
