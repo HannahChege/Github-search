@@ -14,19 +14,17 @@ export class UserComponent implements OnInit {
 
  users: any=[];
  repositories: any =[] ;
- username:string;
+ username='HannahChege'
 
- findUser($name) {
+
+constructor(public us:  UsersService) {}
+
+findUser($name) {
   console.log($name.target.value);
   this.us.getUsers($name.target.value)
- }
- findRepo($name) {
   console.log($name.target.value);
   this.us.getUserRepos($name.target.value)
  }
-constructor(public us:  UsersService) {}
-
-
   //    this.usersService.getUserRepos().subscribe(reposi => {
   //     console.log(reposi);
   //     this.repositories = reposi;
