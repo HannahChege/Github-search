@@ -13,11 +13,12 @@ import { Repositories } from '../repositories'
 export class UserComponent implements OnInit {
 
  users: any=[];
- repositories: any =[] ;
  username='HannahChege'
 
+constructor(public us:  UsersService) {
 
-constructor(public us:  UsersService) {}
+}
+repositories: us.repo$;
 
 findUser($name) {
   console.log($name.target.value);
@@ -32,6 +33,8 @@ findUser($name) {
 
   // }
   ngOnInit() {
+    this.us.getUsers(this.username)
+    this.us.getUserRepos(this.username)
 }
 
 

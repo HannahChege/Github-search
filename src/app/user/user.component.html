@@ -51,11 +51,11 @@
   <br>
   <div class="card">
     <div class="card-header display-4" style="text-align:center; color:maroon">{{us.user$.login}}'s repositories</div>
-    <div class="card-body" *ngFor="let repository of repo$; let i=index">
+    <div class="card-body" *ngFor="let repository of repositories; let i=index">
       <ul>
         <li>
-        <h5 appUnderline class="clearfix">{{repositories[i].name}}<a href="{{repositories[i].html_url}}" target="_blank" class="btn btn-sm btn-outline-primary float-right"> View on Github</a></h5>
-      <p style="font-style:italic;">{{repositories[i].description}}</p>
+        <h5 appUnderline class="clearfix">{{repositories.name}}<a href="{{repositories.html_url}}" target="_blank" class="btn btn-sm btn-outline-primary float-right"> View on Github</a></h5>
+      <p style="font-style:italic;">{{repositories.description}}</p>
       </li>
     </ul>
       <hr>
