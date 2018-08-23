@@ -51,33 +51,10 @@ a:hover {
 	text-decoration: underline;
 }
 
-input {
-	border: none;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5em;
-	padding: 0;
-	-webkit-appearance: none;
-}
-
 p {
 	line-height: 1.5em;
 }
 
-.clearfix {
-  *zoom: 1;
-
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-
-}
 
 .container {
   left: 50%;
@@ -86,16 +63,15 @@ p {
   transform: translate(-50%, -50%);
 }
 
-/* ---------- LOGIN ---------- */
 
-#login {
+#landing {
 	width: 250px;
 }
-#login, .logo{
+#landing, .logo{
     display:inline-block;
     width:40%;
 }
-#login{
+#landing{
 border-right:1px solid #fff;
   padding: 0px 22px;
   width: 59%;
@@ -106,7 +82,7 @@ font-size:50px;
   line-height: 125px;
 }
 
-#login span.fa {
+#landing span.fa {
 	background-color: #fff;
 	border-radius: 3px 0px 0px 3px;
 	color: #000;
@@ -119,46 +95,34 @@ font-size:50px;
 	width: 50px;
 }
 
-#login input {
-	height: 50px;
-}
+
 fieldset{
     padding:0;
     border:0;
     margin: 0;
 
 }
-#login input[type="text"], input[type="password"] {
-	background-color: #fff;
-	border-radius: 0px 3px 3px 0px;
-	color: #000;
-	margin-bottom: 1em;
-	padding: 0 16px;
-	width: 200px;
-}
 
-#login form input[type="submit"] {
+.btn-info{
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   background-color: #000000;
   color: #eee;
   font-weight: bold;
-  /* margin-bottom: 2em; */
   text-transform: uppercase;
   padding: 5px 10px;
   height: 30px;
+  height: 50px;
+  font-size:24px;
+  line-height: 50px;
 }
 
-#login input[type="submit"]:hover {
-	background-color: #d44179;
-}
-
-#login > p {
+#landing > p {
 	text-align: center;
 }
 
-#login > p span {
+#landing > p span {
 	padding-left: 5px;
 }
 .middle {
