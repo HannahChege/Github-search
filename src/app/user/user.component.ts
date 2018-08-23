@@ -20,7 +20,10 @@ export class UserComponent implements OnInit {
   console.log($name.target.value);
   this.us.getUsers($name.target.value)
  }
- 
+ findRepo($name) {
+  console.log($name.target.value);
+  this.us.getUserRepos($name.target.value)
+ }
 constructor(public us:  UsersService) {}
 
 

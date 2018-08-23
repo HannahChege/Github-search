@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 export class UsersService {
 
   user$
+  repo$
   private username: string;
   private apiKey: string = environment.apiKey;
 
@@ -27,8 +28,14 @@ export class UsersService {
     )
     
   }
-  getUserRepos() {
+  getUserRepos(username) {
     return this.http.get("https://api.github.com/users/" + this.username + "/repos?" +"?access_token=" + this.apiKey)
+    .subscribe(
+      data =>{
+        console.log(data)
+        this.repo$ = data
+
+      }
   
   // constructor() { }
 }
