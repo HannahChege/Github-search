@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import {RoutingModule} from './routing/routing.module'
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 import { AppComponent } from './app.component';
@@ -16,13 +17,15 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     AppComponent,
     UserComponent,
     HeaderComponent,
-    LandingpageComponent
+    LandingpageComponent,
+   TimeAgoPipe 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RoutingModule
+    
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
