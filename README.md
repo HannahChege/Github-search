@@ -1,47 +1,63 @@
-#TITLE
+# Title
+
 GITHUB SEARCH
 
-## DESCRIPTION
+#### By Hannah Chege
 
-This project was 
+## Description
+This is a website where users enter a Github Username into a form, submit it and see names and descriptions of that person's public repositories.A person can also look for repositories.I have used a Github Api to retrieve this information.
+
+## Prerequisites
+  You need the following to make edits to the repository:
+  1. Git
+  2. an integrated development environment
+  3. Angular CLI
+  4. NPM
 
 
- ## AUTHOR
-HANNAH NJERI CHEGE
+## Setup Instructions
+  1. Copy the clone link provided in the repository
+  2. Start your command line
+  3. Run the git clone command with the copied links
+  4. Make changes to the remote(s) used to point to your repository
+  5. follow the angular instructions below.
 
-## PREREQUISITES
+## technologies used
+1. Bootstrap
+2. NPM
+3. Angular
+4. Visual code studio
 
-You require a browser preferably chrome to run this site.You will require a texteditor e.g Visual studio code if your planning on editing.
+
+#### Link to the live site of the repository can be found at:
+ https://github.com/HannahChege/Github-Search
+
+
+This project is under an MIT [license](LICENSE)
+
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-1.HTML
-2.CSS
-3.BOOTSTRAP
-4.ANGULAR CLI
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## LINK TO LIVE SITE
+## Running unit tests
 
-https://github.com/HannahChege/Quote-App
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
-## CONTACT DETAILS
-
-In case of any problems when accesing my site feel free to contact me on hannahchege45@gmail.com your feedback will be highly appreciated
-
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Github-search
-# Github-search
-
-## LICENCE
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Copyright 2018 HANNAHCHEGE.
