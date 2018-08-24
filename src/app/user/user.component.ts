@@ -16,10 +16,9 @@ export class UserComponent implements OnInit {
  username='HannahChege'
 
 constructor(public us:  UsersService) {
+  // repositories:us.user$.repo$;
 
 }
-repositories: us.repo$;
-
 findUser($name) {
   console.log($name.target.value);
   this.us.getUsers($name.target.value)

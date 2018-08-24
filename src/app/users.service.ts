@@ -15,7 +15,6 @@ export class UsersService {
   repo$
   private username: string;
   private apiKey: string = environment.apiKey;
-
   constructor(public http: HttpClient) {  }
 
   getUsers(username){
@@ -36,9 +35,11 @@ export class UsersService {
         this.repo$ = data
 
       }
+    )
+    }
   
   // constructor() { }
-}
+
 
 updateProfile(username: string) {
   this.username = username;
